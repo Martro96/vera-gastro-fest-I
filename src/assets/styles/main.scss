@@ -15,8 +15,12 @@
  * see commented examples below
  */
 
-// @import "some-node-module";
-// @import "@some-company/some-node-module";
+ //Import Bootstrap
+ @import "bootstrap/scss/bootstrap";
+
+//Import Font Awesome
+@import 'npm:@fortawesome/fontawesome-free/css/all.css';
+
 
 /**
  * Import layouts
