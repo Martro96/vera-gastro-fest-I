@@ -10,6 +10,10 @@
   font-family: 'Tanker';
   src: url('../fonts/Tanker-Regular.otf')
 }
+@font-face {
+  font-family: 'Melodrama';
+  src: url('../fonts/Melodrama-Semibold.otf')
+}
 title {
   display: none;
 }
@@ -75,24 +79,87 @@ title {
 }
 
 /*INDEX*/
-.bg-container__index {
+.bg-container {
+  position: relative;
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
+}
+.bg-container__index { 
+  display: block;
+  width: 100%; 
+  height: 90vh !important;
+  object-fit: cover; 
+  object-position: top;
 }
 .bg-container:before {
   position: absolute;
   z-index: 3;
   width: 100%;
-  height: 100%;
+  height: 90vh !important;
   content: '';
   background-color: var(--bg__capa);
 }
+.intro {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  width: 80%;
+  color:var(--WHITE);
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.intro--subheader {
+  margin-bottom: 1rem;
+  font-family: 'Melodrama', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+
+.descripcion--p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+
 
 /*FOOTER*/
 footer {
   position: relative;
-  z-index: 2;
+  z-index: 4;
+}
+.footer--header {
+  margin-top: 30px;
+  font-family: 'Tanker', sans-serif;
+  text-align: center;
+}
+.footer--info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.info--1 {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  width: 70%;
+  padding: 50px;
+  margin: auto;
+}
+.footer-link {
+  padding: 15px;
+  font-family: 'Archivo', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--WHITE);
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  background-color: var(--RED);
+  border-radius: 15px;
+}
+.footer-link:hover {
+  color: var(--BLACK);
 }
 .mapa {
   width: 100%;
@@ -109,6 +176,45 @@ footer {
   width: 100%;
 }
 
+.footer-enlaces {
+  display: flex;
+  flex-direction: column;
+}
+.main-nav__footer, .nav--list__footer, .footer--rrss {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+
+}
+.link--logo__footer {
+  padding: 15px;
+  margin: 30px;
+  font-family: 'Tanker', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--BLACK);
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  border-radius: 15px;
+}
+.link--logo__footer:hover {
+  color: var(--RED);
+  text-decoration: underline var(--RED);
+}
+.nav--list__footer, .footer--links {
+  display: flex;
+}
+
+.rrss--item {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.rrss {
+  color: var(--RED);
+}
 
 /*******FORMATO RESPONSIVE********/
   /*PHONE*/
@@ -200,13 +306,63 @@ footer {
   }
 
   .main-nav--visible {
+      position: absolute;
       z-index: 10;
       gap: 20px;
       visibility: visible;
-      opacity: 1
+      opacity: 5;
   }
 
   .main-nav__link--info--visible .cerrar__menu {
       display: block;
+  }
+
+  /*FOOTER*/
+  .info--1 {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  main-nav__footer, .nav--list__footer, .footer--links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+  }
+  .link--logo__footer {
+    padding: 20px;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  /*INDEX*/
+  .bg-container__index { 
+    width: 100%; 
+    height: 100vh !important;
+    object-fit: cover; 
+    object-position: top;
+  }
+
+
+  .bg-container:before {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100vh !important;
+    content: '';
+    background-color: var(--bg__capa);
+  }
+  .intro {
+    top: 55%;
+    width: 80%;
+  }
+  .intro--subheader {
+    font-size: 1.5rem;
+  }
+  .descripcion--p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
   }
 }
