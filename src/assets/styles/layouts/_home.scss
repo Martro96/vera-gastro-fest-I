@@ -1,57 +1,212 @@
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/Archivo-VariableFont_wdth\,wght.ttf')
+}
+@font-face {
+  font-family: 'Lokanova';
+  src: url('../fonts/Lokanova-Std.otf')
+}
+@font-face {
+  font-family: 'Tanker';
+  src: url('../fonts/Tanker-Regular.otf')
+}
+title {
+  display: none;
+}
 * {
   box-sizing: border-box;
+  display: block;
+  font-family: 'Archivo', sans-serif;
 }
 
-body {
+
+/**NAVEGADOR**/
+.abrir__menu,
+.cerrar__menu {
+  display: none;
+}
+.main-nav__list {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
-}
-
-.uoc-container {
-  max-width: 800px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
   margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-top: 50px;
+  list-style-type: none;
+  
+}
+.main-nav__link--info {
+  display: flex;
+  gap: 20px;
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+.main-nav{
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items:center;
+  justify-content: space-between; 
+  width: 100%;
+  margin: auto;
+}
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+.main-nav__item{
+  display: flex;
+  margin: auto;
+}
+
+.main-nav__link, .main-nav__link--logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  font-family: 'Tanker', sans-serif;
+  font-size: 1.5rem;
+  color: var(--WHITE);
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+.main-nav__link:hover, .main-nav__link--logo:hover {
+  color: var(--RED);
+  text-decoration: underline;
+}
+
+/*INDEX*/
+.bg-container__index {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.bg-container:before {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: var(--bg__capa);
+}
+
+/*FOOTER*/
+footer {
+  position: relative;
+  z-index: 2;
+}
+.mapa {
+  width: 100%;
+  height: fit-content;
+}
+.contenedor__ubicacion {
+  z-index: 9;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+}
+.ubiacion__mapa--mapa {
+  width: 100%;
+}
+
+
+/*******FORMATO RESPONSIVE********/
+  /*PHONE*/
+@media only screen and (max-width: 766px) {
+
+  /*NAV*/
+    .main-nav__link {
+      visibility: visible;
   }
-}
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+  .main-nav__link--logo {
+      position: relative;
+      top: -10px;
+      z-index: 1;
+      width: 100%;
+      margin: 0;
+      font-size: 24px;
+      text-decoration: none;
+      visibility: visible;
   }
-}
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+  /*.logo-hovered__img {
+      width: 220px;
+      height: 80px;
+      position: relative;
+      top: -30px;
+      left: -15px;
+  }
+*/
+  .abrir__menu {
+      position: absolute;
+      right: 0;
+      z-index: 3;
+      display: block;
+      margin: 20px;
+      font-size: 2rem;
+      color: var(--WHITE);
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+  }
+
+  .abrir__menu:hover {
+      color: var(--RED);
+  }
+
+  .cerrar__menu {
+      position: absolute;
+      top: 20;
+      right: 20;
+      z-index: 3;
+      display: block;
+      font-size: 2rem;
+      color: var(--WHITE);
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+  }
+
+  .cerrar__menu:hover {
+      color: var(--BLACK);
+  }
+
+  .main-nav__link--info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: self-start;
+      width: 200px;
+      padding: 5rem 2rem;
+      margin: 0;
+      visibility: hidden;
+      background-color: var(--RED);
+      border-radius: 15px;
+      box-shadow: 0 0 0 1000vmax rgb(0 0 0 / .5);
+      opacity: 0;
+  }
+
+  .main-nav__item {
+      padding: 0px;
+      margin: 0;
+      font-size: 20px; 
+      text-align: start;
+  }
+  .main-nav__link:hover {
+    color: var(--BLACK);
+  }
+
+  .main-nav--visible {
+      z-index: 10;
+      gap: 20px;
+      visibility: visible;
+      opacity: 1
+  }
+
+  .main-nav__link--info--visible .cerrar__menu {
+      display: block;
+  }
 }
