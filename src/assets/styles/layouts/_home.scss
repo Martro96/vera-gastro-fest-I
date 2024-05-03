@@ -100,15 +100,7 @@ title {
   content: "";
   background-color: var(--bg__capa);
 }
-.container--page__chefs {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  background-image: url(../images/foto-principal3.jpg);
-  background-position: top;
-  background-size: cover; 
-  
-}
+
 .container--info {
   position: relative;
   width: 100%;
@@ -121,24 +113,11 @@ title {
   position: relative;
   width: 100%;
   height: 90vh;
-  background-image: url(../images/foto-principal4.jpg);
+  background-image: url(../images/foto-principal3.jpg);
   background-position: top; 
   background-size: cover; 
 }
-/*.bg-container__index { 
-  display: block;
-  width: 100%; 
-  height: 90vh !important;
-  
-}
-.bg-container:before {
-  position: absolute;
-  z-index: 3;
-  width: 100%;
-  height: 90vh !important;
-  content: '';
-  background-color: var(--bg__capa);
-}*/
+
 .intro {
   position: relative;
   z-index: 1;
@@ -163,14 +142,148 @@ title {
 }
 
 
+/*CHEF*/
+.container--page__chefs {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  background-image: url(../images/foto-principal6.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: space-around;
+  width: 100%;
+  padding: 40px;
+}
+.card-chef {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 380px;
+  margin-left: 20px;
+  background-color: #FEF4EB;
+  border-radius: 20px;
+  box-shadow: 0px 7px 10px rgb(0 0 0 / 0.5);
+  transition: 0.5s ease-in-out;
+}
+
+.chef-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    
+  border-radius: 20px;
+}
+.card-chef:hover {
+  transform: translateY(20px);
+}
+.card-chef:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block; 
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(to bottom, rgb(255 255 255 / 0.178), rgb(146 5 5 / 0.402));
+  background-position: center;
+  border-radius: 20px;
+  opacity: 0;
+  transition: 0.5s all;
+}
+.card-chef:hover:before {
+  opacity: 1;
+}
+
+.card-chef .info {
+  position: absolute;
+  right: 0; /* Ajusta la posición del texto y el botón */
+  bottom: 0; /* Ajusta la posición del y el botón */
+  left: 0; /* Ajusta la posición del texto y el botón */
+  z-index: 3;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center; /* Centra el texto horizontalmente */
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+.card-chef:hover .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  opacity: 1;
+  transform: translateY(0); /* Desplaza el texto hacia abajo */
+
+}
+
+.card-chef .info h2 {
+  justify-content: flex-start;
+  margin: 0;  
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--WHITE);
+  text-align:center;
+  letter-spacing: 1px;
+
+}
+.card-chef .info p {
+  margin-top: 8px;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5; /* Ajusta el espaciado entre líneas */
+  color: #FEF4EB;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.card-chef .info .btn {
+  position: absolute; /* Ajusta el posicionamiento del botón */
+  bottom: 10px; /* Ajusta la posición del botón */
+  left: 50%; /* Ajusta la posición del botón */
+  z-index: 4;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00436A;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #ffa707;
+  border-radius: 20px;
+  transition: 0.4s ease-in-out;
+  transform: translateX(-50%); /* Centra el botón horizontalmente */
+  
+}
+
+.card-chef .info .btn:hover {
+  color: #FEF4EB;
+  box-shadow: 0px 7px 10px rgb(0 0 0 / 0.5);
+}
+
+
+
 
 /*FOOTER*/
 footer {
   position: relative;
-  //z-index: 4;
+  background-color: var(--WHITE);
 }
 .footer--header {
-  margin-top: 30px;
+  padding-top: 30px;
   font-family: 'Tanker', sans-serif;
   text-align: center;
 }

@@ -1,22 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <link rel="shortcut icon" href="./assets/images/pimiento-picante.png" type="image/x-icon">
-    <title>Nuestros chefs</title>
-  </head>
-  <body>
-    <div class="container--page container--page__chefs">
-      <include src="./views/nav.html"></include>
-        <!--<div class="bg-container bg-container__chefs">
-        <img class="bg-container__index" src="./assets/images/foto-principal3.jpg" alt="foto principal"> -->
-        <div class="intro">
-        </div>
-      </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
-  </html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <link rel="shortcut icon" href="./assets/images/pimiento-picante.png" type="image/x-icon">
+  <title>Nuestros chefs</title>
+</head>
+
+<body>
+  <div class="container--page container--page__chefs">
+    <include src="./views/nav.html"></include>
+    <div class="intro">
+      <div class="wrapper">
+        <div class="card-chef chef1">
+          <img class="chef-img" src="./assets/images/chef.jpg" alt="Chef">
+          <div class="info">
+            <h2>Rosa María Soto</h2>
+            <p>Con su toque fresco y moderno, Rosa María presenta: "Pimientos Rellenos de Quinoa y Verduras al Estilo del Valle".</p>
+          </div>
+        </div>
+
+        <div class="card-chef chef2">
+          <img class="chef-img" src="./assets/images/chef2.jpg" alt="Chef">
+          <div class="info">
+            <h2>Mateo García</h2>
+            <p>Para los amantes de lo dulce, Mateo trae: "Cheesecake Vegano de Cerezas y Almendras con Base de Dátiles".</p>
+          </div>
+        </div>
+
+        <div class="card-chef chef3">
+          <img class="chef-img" src="./assets/images/chef3.jpg" alt="Chef">
+          <div class="info">
+            <h2>Luisa Hernández</h2>
+            <p>Luces y sabores saludables con: "Ensalada Fresca de Picotas, Espinacas y Quinoa con Aderezo de Mostaza y Miel Vegana".</p>
+          </div>
+        </div>
+
+        <div class="card-chef chef4">
+          <img class="chef-img" src="./assets/images/chef4.jpg" alt="Chef">
+          <div class="info">
+            <h2>Carlos Martínez</h2>
+            <p>Un giro contemporáneo en un clásico: "Guiso Vegano de Garbanzos con Verduras y Pimentón Dulce del Valle".</p>
+          </div>
+        </div>
+
+        <div class="card-chef chef5">
+          <img class="chef-img" src="./assets/images/chef5.jpg" alt="Chef">
+          <div class="info">
+            <h2>Isabel Torres</h2>
+            <p>Para los paladares aventureros: "Tarta Vegana de Chocolate con Base de Nueces y Sorpresa de Pimentón Dulce".</p>
+          </div>
+        </div>
+
+        <div class="card-chef chef6">
+          <img class="chef-img" src="./assets/images/chef6.jpg" alt="Chef">
+          <div class="info">
+            <h2>Alejandro Ramírez</h2>
+            <p>Un toque moderno a la tradición con: "Pollo de Soja con Salsa Barbacoa Vegana y Pimentón Ahumado".</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
+</html>
