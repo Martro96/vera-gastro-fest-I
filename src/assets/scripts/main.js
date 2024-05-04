@@ -51,17 +51,32 @@ import Swiper from 'swiper';
 // Importar los estilos de Swiper y los módulos necesarios
 import 'swiper/swiper-bundle.css';
 
-/***SWIPER***/
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
+// Inicializar Swiper
+let swiper = new Swiper('.swiper', {
+    direction: "horizontal",
     loop: true,
-  
-     
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    slidesPerView: 2,
+    spaceBetween: 0,
+    // Agregar los módulos de navegación y paginación
+     navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-  
-  });
+    breakpoints: {
+        // when window width is >= 320px
+        250: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        },
+        // when window width is >= 768 pantalla desktop
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        // when window width is >=900
+        915: {
+            slidesPerView: 3,
+            spaceBetween: 100,
+        }
+        }
+});
