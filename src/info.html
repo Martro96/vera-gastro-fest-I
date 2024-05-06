@@ -1,23 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <link rel="shortcut icon" href="./assets/images/pimiento-picante.png" type="image/x-icon">
-    <title>Información A mi vera Battle</title>
-  </head>
-  <body>
-    <div class="container--page container--info">
-      <include src="./views/nav.html"></include>
-      <div class="bg-container bg-container__info">
-          <!--<img class="bg-container__index" src="./assets/images/foto-principal5.jpg" alt="foto principal">-->
-          <div class="intro">
-          </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <link rel="shortcut icon" href="./assets/images/pimiento-picante.png" type="image/x-icon">
+  <title>Información A mi Vera Battle</title>
+</head>
+
+<body>
+  <div class="container--page container--info">
+    <include src="./views/nav.html"></include>
+    <div class="bg-container bg-container__info">
+      <div class="intro-article">
+        <h1 class="article-header">
+          Concurso Culinario del Valle del Jerte.
+        </h1>
+        <h3 class="article-subheader">
+          Celebrando la Pasión por la Cocina tradicional de nuestra zona.
+        </h3>
+      </div>
+    </div>
+  </div>
+  <article>
+    <div class="article-bloque1">
+      <div class="bloque1-1">
+        <p class="bloque1-1__p">Un concurso de sabores de la zona.
+        </p>
       </div>
 
+      <div class="bloque1-2">
+        <p>Los participantes tienen la oportunidad de mostrar su creatividad en la cocina mientras utilizan los
+          deliciosos productos locales como protagonistas de sus platos.</p>
+        <p>Desde el famoso pimentón hasta las jugosas cerezas, el Valle del Jerte ofrece una amplia variedad de
+          ingredientes para inspirar a los concursantes.
+        </p>
+      </div>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
-  </html>
+    <h3 class="ol-header">
+      Sigue estos pasos para inscribirte en el concurso:
+    </h3>
+    <ol class="article--ol"> 
+      <li class="item-ol">
+       <strong>Completa el  <a class="item-ol__link" href="contact.html">Formulario en Línea:</a></strong> Proporciona todos los detalles
+        requeridos, incluyendo tu información personal y los detalles de tu propuesta culinaria.
+      </li>
+      <li class="item-ol"><strong>Adjunta la Receta y Fotos: </strong>Junto con el formulario de inscripción, adjunta la
+        receta detallada de tu plato y fotos del mismo. Esto ayudará al comité organizador a evaluar tu propuesta y
+        garantizar que cumpla con los requisitos del concurso.</li>
+      <li class="item-ol"><strong>Paga la cuota de Inscripción: </strong>El dinero recaudado se destinará al Comité de
+        Fiestas del pueblo Jaraíz de la Vera, donando además un 20% a causas sociales. </li>
+      <li class="item-ol"><strong>Confirma tu Inscripción: </strong>Una vez que hayas enviado el formulario de
+        inscripción y realizado el pago, espera la confirmación de tu inscripción por parte del comité organizador del
+        concurso.</li>
+    </ol>
+    <div class="article-bloque3">
+      <div class="bloque3-1">
+        <p>
+          Llegado el día del concurso, presenta tu plato con orgullo y disfruta de la experiencia. Ya sea que compitas
+          por el premio principal o simplemente quieras disfrutar de la comida y el ambiente, el Concurso Culinario del
+          Valle del Jerte promete una experiencia inolvidable para todos los amantes de la cocina.
+        </p>
+        <h3 class="ul-header">
+          Categorías y Premios:
+        </h3>
+        <ul class="article--ul">
+          <li class="item-ul"><strong>Categoría Tradicional: </strong>Reconocerá al participante cuyo plato
+            refleje mejor la tradición culinaria del Valle del Jerte. 
+            <br>El ganador recibirá un trofeo personalizado y un
+            certificado de reconocimiento, junto con una cesta de productos locales de alta calidad, que incluirá
+            pimentón, cerezas, aceite de oliva y otros productos emblemáticos de la región. </li>
+          <li class="item-ul"><strong>Categoría Creatividad Culinary: </strong>Destacará al participante que
+            presente la propuesta culinaria más innovadora y creativa. 
+            <br>El ganador recibirá un curso de cocina exclusivo
+            con un chef reconocido en la región, donde tendrá la oportunidad de aprender nuevas técnicas y experimentar
+            con ingredientes locales. Además, recibirá un bono de compra para utensilios de cocina de alta calidad.</li>
+          <li class="item-ul"><strong>Categoría Espíritu del Concurso: </strong>Este premio se otorgará al participante
+            que mejor represente el espíritu del concurso, mostrando pasión, dedicación y entusiasmo por la cocina y los
+            productos del Valle del Jerte. 
+            <br>El ganador recibirá una experiencia gastronómica única, que incluirá una
+            visita guiada a los huertos y productores locales, seguida de una cena exclusiva preparada por un chef
+            destacado, donde podrá disfrutar de una selección de platos inspirados en la región.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+  <div class="article-img">
+    <img class="article-img__img" src="./assets/images/Garganta-infiernos.jpg"
+      alt="Garganta de los Infiernos, Jerte, Spain">
+  </div>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
+</html>
