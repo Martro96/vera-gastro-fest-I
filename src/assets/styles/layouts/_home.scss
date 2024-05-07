@@ -295,7 +295,6 @@ title {
   letter-spacing: 1px;
 }
 
-/*INFO NO SÉ CÓMO PONER EL NAV AL MISMO NIVEL QUE EL RESTO DE PÁGINAS*/
 .container--info {
   position: relative;
   width: 100%;
@@ -303,6 +302,15 @@ title {
   background-image: url(../images/foto-principal2.jpg);
   background-position: top; 
   background-size: cover; 
+}
+.container--info::before {
+  position: absolute;
+  top: 0;
+  left: 0;  
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: var(--bg__capa);
 }
 .intro-article {
   position: relative;
