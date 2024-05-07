@@ -316,19 +316,20 @@ article {
   width: 70%;
   margin: auto;
 }
-.article-header {
+/*USAMOS LA PSEUDO CLASE :IS */
+:is(.article-header, .article-subheader) {
   font-family: 'Melodrama', sans-serif;
-  font-size: 30px;
   color: var(--WHITE);
   text-align: center;
   letter-spacing: 0.1rem;
 }
+
+.article-header {
+  font-size: 30px; 
+}
+
 .article-subheader {
-  font-family: 'Melodrama', sans-serif;
-  font-size: 20px;
-  color: var(--WHITE);
-  text-align: center;
-  letter-spacing: 0.1rem;
+  font-size: 20px; 
 }
 
 .article-bloque1 {
@@ -387,16 +388,42 @@ strong {
   background-position: bottom;
 }
 /*FORM*/
-.container--contact {
+.container--formulario {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   background-image: url(../images/foto-principal3.jpg);
-  background-position: top; 
+  background-position: center; 
   background-size: cover; 
 }
 
-
+form {
+  width: 80%;
+  padding: 20px 0px;
+  margin: auto;
+}
+.mb-3 {
+  padding: 20px 0px;
+  font-family: 'Tanker', sans-serif;
+  font-size: 30px;
+  color: var(--RED);
+}
+.form-check-input:checked {
+  background-color: var(--RED);
+  border-color: var(--RED)}
+.cvc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.btn-primary  {
+  margin: 50px 0px;
+  background-color: var(--RED);
+  border-color: var(--BLACK);
+}
+.subir--archivo {
+  display: block;
+}
 
 /*FOOTER*/
 footer {
@@ -516,14 +543,6 @@ footer li {
       visibility: visible;
   }
 
-  /*.logo-hovered__img {
-      width: 220px;
-      height: 80px;
-      position: relative;
-      top: -30px;
-      left: -15px;
-  }
-*/
   .abrir__menu {
       position: absolute;
       right: 0;
@@ -654,6 +673,9 @@ footer li {
     display: none;
   }
   /*INFO*/
+  .intro-article {
+    z-index: 0;
+  }
   .article-subheader {
     display: none;
   }
@@ -683,9 +705,19 @@ footer li {
   .container-cards-chefs {
     display: none;
   }
+  .header-chefs {
+    margin: 20px auto auto;
+    font-size: 24px;  }
+   /*intro*/
+  :is(.container--formulario, .container--info) {
+    top: 0;
+    height: 40vh;
+  }
+  :where(.container--formulario, .container--info) > .main-nav {
+    margin: 10px auto auto;
+  }
   /*INFO*/
   .article-img__img {
     height: 30vh;
   }
-
 }
