@@ -9,11 +9,11 @@
 /**
  * Write any other JavaScript below
  */
+import 'bootstrap';
 
 import * as bootstrap from 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 
 /****MENÚ HAMBURGUESA******/

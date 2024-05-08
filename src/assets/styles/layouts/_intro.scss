@@ -1,0 +1,108 @@
+/*INDEX*/
+@layer components {
+@container (min-width: 768px) {
+    .container--page {
+      width: 90%; 
+    }
+  }
+  .container--page {
+    position: relative;
+    width: 100%;
+    height: fit-content !important;
+    background-image: url(../images/foto-principal5.jpg);
+    background-position: top;
+    background-size: cover;
+    
+  }
+  .container--page::before {
+    position: absolute;
+    top: 0;
+    left: 0;  
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: var(--bg__capa) !important;
+  }
+
+  .intro-index { 
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-row: 2;
+    grid-column: 1;
+    align-items: center;
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+    color: var(--WHITE);
+    text-align: center;
+  }
+  
+  .intro--subheader {
+    margin-bottom: 1rem !important;
+    font-family: 'Melodrama', sans-serif !important;
+    font-size: 2rem !important;
+    letter-spacing: 0.1rem !important;
+  }
+
+  .descripcion--p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .info-inscripcion {  
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 3;
+    grid-column: 1;
+    gap: 15px;
+    padding: 20px;
+    color: var(--WHITE);
+  }
+  .inscripcion--p {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--bg__capa);
+  }
+  
+  @supports not (display: grid) {
+    .container--page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+ 
+  
+  /*******FORMATO RESPONSIVE********/
+  /*PHONE*/
+@media only screen and (max-width: 767px) {
+  .intro {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  .intro--subheader {
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+    font-size: 24px;
+  }
+  .descripcion--p {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .container--info {
+    height: 60vh;
+}
+}  
+}
